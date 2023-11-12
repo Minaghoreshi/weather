@@ -1,10 +1,13 @@
 import "./App.css";
-import { CurrentWeather, WeatherDetails } from "./Components";
+import { CurrentWeather, WeatherDetails, Search } from "./Components";
 function App() {
   return (
     <div className="app">
-      <CurrentWeather />
-      <WeatherDetails />
+      <Search />
+      <div className="app_main">
+        <CurrentWeather />
+        <WeatherDetails />
+      </div>
     </div>
   );
 }
