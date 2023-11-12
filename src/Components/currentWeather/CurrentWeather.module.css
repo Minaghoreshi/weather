@@ -1,0 +1,40 @@
+/* @import url("../../assets/background.png"); */
+.currentweather__wrapper {
+  width: 493px;
+  height: 666px;
+  border-radius: 30px;
+  background-image: url("../../assets/background.png");
+  padding: 48px 0 84px 32px;
+  background-size: 100% 100%;
+  background-position: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.currentweather__wrapper div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #ffffff;
+}
+.date :first-child {
+  font-size: 50px;
+  font-weight: 700;
+}
+.date :nth-child(2) {
+  font-size: 22px;
+  font-weight: 500;
+}
+.date :last-child {
+  font-size: 20px;
+  font-weight: 600;
+}
+.currentweather__details :nth-child(2) {
+  font-size: 50px;
+  font-weight: 700;
+}
+.currentweather__details :last-child {
+  font-size: 30px;
+  font-weight: 700;
+}
