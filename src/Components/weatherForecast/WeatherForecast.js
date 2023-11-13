@@ -19,13 +19,27 @@ export function WeatherForecast() {
   return (
     <div className={styles.forecast__wrapper}>
       {forecastData
-        ? forecastData.map((day, index) => (
-            <div className={styles.forecast__cart} key={index}>
-              <LuSunMedium className={styles.forecast__cart__icon} />
-              <span>Tue</span>
-              <span>30 °C</span>
-            </div>
-          ))
+        ? forecastData.map((day, index) => {
+            const weekday = new Date(day.date).toLocaleString("en-US", {
+              weekday: "short",
+            });
+            console.log(weekday);
+            return (
+              <div
+                className={
+                  index === 0
+                    ? styles.forecast__current__cart
+                    : styles.forecast__cart
+                }
+                key={index}
+              >
+                {/* <LuSunMedium className={styles.forecast__cart__icon} /> */}
+                <img src={day.day.condition.icon} alt="daymood" />
+                <span>{weekday}</span>
+                <span>{day.day.avgtemp_c} °C</span>
+              </div>
+            );
+          })
         : ""}
     </div>
   );

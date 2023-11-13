@@ -7,10 +7,11 @@
   width: 104px;
   height: 168px;
   border-radius: 10px;
-  background: #fff;
+  background: #272e37;
   justify-content: center;
   align-items: center;
   gap: 15px;
+  box-shadow: 1px 2px 4px 0px #222831;
 }
 .forecast__cart :nth-child(2) {
   font-size: 20px;
@@ -22,6 +23,22 @@
   font-weight: 700;
 }
 .forecast__cart__icon {
+  width: 55px;
+  height: 55px;
+}
+.forecast__current__cart {
+  display: flex;
+  flex-direction: column;
+  width: 104px;
+  height: 168px;
+  border-radius: 10px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 1px 2px 4px 0px #222831;
+}
+img {
   width: 55px;
   height: 55px;
 }
