@@ -38,3 +38,8 @@
   font-size: 30px;
   font-weight: 700;
 }
+img {
+  width: 95px;
+  height: 95px;
+  color: white;
+}

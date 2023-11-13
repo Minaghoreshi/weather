@@ -1,18 +1,16 @@
 import { createContext, useReducer } from "react";
 import { weatherReducer } from "../weather-reducer/weatherReducer";
 
-const initialState = {
-  weatherData: null,
-  error: null,
-};
-
 export const WeatherContext = createContext();
 export const WeatherProvider = (props) => {
-  const [satet, dispatch] = useReducer(weatherReducer, initialState);
+  const [state, dispatch] = useReducer(weatherReducer, {
+    weatherData: null,
+    error: null,
+  });
   return (
     <WeatherContext.Provider
       value={{
-        satet,
+        state,
         dispatch,
       }}
     >
