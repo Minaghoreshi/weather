@@ -1,13 +1,17 @@
 import "./App.css";
 import { CurrentWeather, WeatherDetails, Search } from "./Components";
+import { WeatherProvider } from "./weather-context/weatherContext";
+
 function App() {
   return (
     <div className="app">
-      <Search />
-      <div className="app_main">
-        <CurrentWeather />
-        <WeatherDetails />
-      </div>
+      <WeatherProvider>
+        <Search />
+        <div className="app_main">
+          <CurrentWeather />
+          <WeatherDetails />
+        </div>
+      </WeatherProvider>
     </div>
   );
 }
