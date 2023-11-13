@@ -8,21 +8,17 @@ const apiKey = `6108e90940f04f92ab8192419231311`;
 
 export function CurrentWeather() {
   const { state, dispatch } = useContext(WeatherContext);
-  const [city, setCity] = useState("mexico");
   useEffect(() => {
-    fetchWeatherData(dispatch, city, apiKey);
+    fetchWeatherData(dispatch, state.location, apiKey);
   }, []);
 
   let result;
-
+  useEffect(() => {});
   if (state.weatherData) {
-    // console.log(state.weatherData);
     result = weatherDetails(
       state.weatherData.location,
       state.weatherData.current
     );
-    // console.log(result);
-    console.log(state.weatherData.forecast.forecastday);
   }
 
   return (

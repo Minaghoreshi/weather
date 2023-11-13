@@ -4,6 +4,7 @@ import { weatherReducer } from "../weather-reducer/weatherReducer";
 export const WeatherContext = createContext();
 export const WeatherProvider = (props) => {
   const [state, dispatch] = useReducer(weatherReducer, {
+    location: "tehran",
     weatherData: null,
     error: null,
   });
