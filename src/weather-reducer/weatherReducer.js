@@ -10,7 +10,7 @@ export const weatherReducer = (state, action) => {
     case actionTypes.ERROR:
       return { ...state, weatherData: null, error: action.payload };
     case actionTypes.SET_LOCATION:
-      return { ...state, location: action.payload };
+      return { ...state, location: action.payload, error: null };
     default:
       return state;
   }
