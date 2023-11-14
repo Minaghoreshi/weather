@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { fetchWeatherData } from "../../api/weather-api";
 import { WeatherContext } from "../../weather-context/weatherContext";
 import styles from "./WeatherForecast.module.css";
@@ -6,6 +6,7 @@ import styles from "./WeatherForecast.module.css";
 const apiKey = `6108e90940f04f92ab8192419231311`;
 export function WeatherForecast() {
   const { state, dispatch } = useContext(WeatherContext);
+  const [selectedDay, setSelectedDay] = useState(0);
   useEffect(() => {
     fetchWeatherData(dispatch, state.location, apiKey);
   }, []);
@@ -23,14 +24,16 @@ export function WeatherForecast() {
             });
             return (
               <div
+                onClick={() => {
+                  setSelectedDay(index);
+                }}
                 className={
-                  index === 0
+                  index === selectedDay
                     ? styles.forecast__current__cart
                     : styles.forecast__cart
                 }
                 key={index}
               >
-                {/* <LuSunMedium className={styles.forecast__cart__icon} /> */}
                 <img src={day.day.condition.icon} alt="daymood" />
                 <span>{weekday}</span>
                 <span>{day.day.avgtemp_c} °C</span>
