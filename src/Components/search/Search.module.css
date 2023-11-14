@@ -19,3 +19,6 @@ input::placeholder {
   font-size: 20px;
   font-weight: 600;
 }
+input:focus {
+  outline: none;
+}
