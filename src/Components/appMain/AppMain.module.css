@@ -1,4 +1,4 @@
-.app__main {
+.app__main__wrapper {
   position: relative;
   position: absolute;
   top: 50%;
@@ -13,4 +13,7 @@
 .notfound__image {
   width: 800px;
   height: 666px;
+}
+.app_main {
+  display: flex;
 }

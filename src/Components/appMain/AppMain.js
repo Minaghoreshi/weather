@@ -15,10 +15,10 @@ export function AppMain() {
   //   return <img className={styles.notfound__image} src={Notfound} alt="404" />;
   // }
   return (
-    <div className={styles.app__main}>
+    <div className={styles.app__main__wrapper}>
       {" "}
       <Search />
-      <div className="app_main">
+      <div className={styles.app_main}>
         {state.error ? (
           notFoundElement
         ) : (
