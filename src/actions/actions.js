@@ -18,3 +18,14 @@ export const weatherDetails = (locationData, currentData) => {
     precipitation: currentData.precip_mm,
   };
 };
+
+export const handleSearch = (event) => {
+  if (event.key === "Enter") {
+    console.log(event.target.value);
+    // dispatch({ type: "SET_LOCATION", payload: event.target.value });
+  }
+};
+// if (event.key === "Enter") {
+//   console.log(ref.current);
+//   dispatch({ type: "SET_LOCATION", payload: ref.current.value });
+// }

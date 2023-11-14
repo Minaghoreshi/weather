@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./WeatherDetails.module.css";
 import { WeatherForecast } from "../weatherForecast/WeatherForecast";
 import { WeatherContext } from "../../weather-context/weatherContext";
-import { weatherDetails } from "../currentWeather/actions";
+import { weatherDetails } from "../../actions/actions";
 export function WeatherDetails() {
   const { state } = useContext(WeatherContext);
   let result;

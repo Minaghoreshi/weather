@@ -1,16 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
-import styles from "./CurrentWeather.module.css";
-import { WeatherContext } from "../../weather-context/weatherContext";
+import React, { useContext, useEffect } from "react";
+import { weatherDetails } from "../../actions/actions";
 import { fetchWeatherData } from "../../api/weather-api";
-import axios from "axios";
-import { weatherDetails } from "./actions";
+import { WeatherContext } from "../../weather-context/weatherContext";
+import styles from "./CurrentWeather.module.css";
 const apiKey = `6108e90940f04f92ab8192419231311`;
 
 export function CurrentWeather() {
   const { state, dispatch } = useContext(WeatherContext);
   useEffect(() => {
     fetchWeatherData(dispatch, state.location, apiKey);
-  }, []);
+  }, [state.location, dispatch]);
 
   let result;
   useEffect(() => {});
